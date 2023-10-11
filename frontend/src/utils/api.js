@@ -98,7 +98,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: 'http://localhost:3000'
+    baseUrl: 'api.kirbro69.nomoredomainsrocks.ru'
 });
 
 export default api;
