@@ -98,7 +98,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: 'api.kirbro69.nomoredomainsrocks.ru'
+    baseUrl: 'https://api.kirbro69.nomoredomainsrocks.ru'
 });
 
 export default api;
