@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000'
+const baseUrl = 'api.kirbro69.nomoredomainsrocks.ru'
 
 function getResData(res) {
   return res.ok ? res.json() : Promise.reject(`${res.status} ${res.statusText}`)
