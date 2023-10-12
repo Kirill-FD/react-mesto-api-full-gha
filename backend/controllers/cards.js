@@ -80,7 +80,7 @@ module.exports.dislikeCard = (req, res, next) => {
     })
     .catch((err) => {
       if (err instanceof mongoose.Error.DocumentNotFoundError) {
-        next(new NotFoundError(`Карточка с _id; ${req.params.cardId} не найдена.`));
+        next(new NotFoundError(`Карточка с _id: ${req.params.cardId} не найдена.`));
       } else if (err instanceof mongoose.Error.CastError) {
         next(new BadRequestError(`Некорректный _id карточки: ${req.params.cardId}`));
       } else {
