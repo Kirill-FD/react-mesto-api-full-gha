@@ -73,7 +73,7 @@ export default function App() {
       document.addEventListener("keydown", closePopupByEsc);
       return () => {
         document.removeEventListener("keydown", closePopupByEsc);
-      };
+      }
     }
   }, [isOpen, closePopup]);
 
@@ -124,7 +124,7 @@ export default function App() {
           setCards(dataCards)
           setIsLoadingCards(false)
         })
-        .catch((err) => console.error(`Ошибка редактирования ${err}`))
+        .catch((err) => console.error(`Ошибка при загрузке начальных данных ${err}`))
     }
   }, [loggedIn]);
 
@@ -183,15 +183,15 @@ export default function App() {
       api
         .removeLike(card._id, localStorage.jwt)
         .then((res) => {
-          setCards(cards => cards.map((item) => item._id === card._id ? res : item));
+          setCards(cards => cards.map((item) => item._id === card._id ? res : item))
         })
-        .catch((error) => console.error(`Ошибка при снятии лайка ${error}`));
+        .catch((err) => console.error(`Ошибка при снятии лайка ${err}`));
     } else {
       api.addLike(card._id, localStorage.jwt)
         .then(res => {
           setCards(cards => cards.map((item) => item._id === card._id ? res : item))
         })
-        .catch((error) => console.error(`Ошибка при установке лайка ${error}`)
+        .catch((err) => console.error(`Ошибка при установке лайка ${err}`)
         );
     }
   }, [currentUser._id]);
@@ -203,11 +203,11 @@ export default function App() {
         localStorage.setItem('jwt', res.token)
         setLoggedIn(true)
         window.scrollTo(0, 0)
-        navigate("/")
+        navigate('/')
       })
-      .catch((error) => {
+      .catch((err) => {
         setIsResultPopupOpen(true);
-        console.error(`Ошибка при авторизации ${error}`);
+        console.error(`Ошибка при авторизации ${err}`);
       })
       .finally(() => setIsSend(false));
   }
@@ -263,7 +263,7 @@ export default function App() {
                   <Main name="signin" isCheckToken={isCheckToken} handleLogin={handleLogin} />
                 </>
               } />
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path='*' element={<Navigate to='/' replace />} />
           </Routes>
         </SendContext.Provider>
 
