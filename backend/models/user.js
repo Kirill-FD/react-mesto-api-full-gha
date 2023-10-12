@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
       validator(url) {
         return urlRegex.test(url);
       },
-      message: 'Невалидный URL',
+      message: 'Введите URL',
     },
   },
   email: {
