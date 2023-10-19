@@ -12,13 +12,15 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      height: 0;
+      height: 142px;
       padding-top: 0;
       overflow: hidden;
       width: 100%;
       top: 0;
       left: 0;
       border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+      visibility: hidden;
+      box-sizing: border-box;
     }
   }
   
