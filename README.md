@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP 51.250.17.130
+IP 158.160.82.115
 
 Frontend https://kirbro69.nomoredomainsrocks.ru
 
